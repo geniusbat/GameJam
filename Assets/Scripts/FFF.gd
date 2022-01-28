@@ -14,7 +14,7 @@ var state = STATES.normal
 
 onready var animationPlayer : AnimationPlayer = $AnimationPlayer
 onready var attackNode = $Attack
-onready var attackArea = $Attack/AttackArea/CollisionShape2D
+onready var attackArea = $CollisionShape2D
 onready var changeParticles = preload("res://Objects/Player/ChangeParticles.tscn")
 
 func _ready():
@@ -28,7 +28,6 @@ func _unhandled_input(event):
 	elif event.is_action_pressed("attack"):
 		if personality==PERSONALITIES.corpusculo:
 			if state==STATES.normal:
-				attackNode.attacking=true
 				state=STATES.attacking
 				attackArea.disabled=false
 				attackNode.visible=true
@@ -54,7 +53,6 @@ func _physics_process(delta):
 				animationPlayer.play("Walk")
 			else:
 				animationPlayer.play("Idle")
-			AssignCorrectDirection(inputDir)
 		STATES.attacking:
 			pass
 		STATES.hurt:
@@ -63,13 +61,13 @@ func _physics_process(delta):
 
 func PushBoxes():
 	var num = get_slide_count()
+	print(num)
 	for i in range(num):
-		var obj = get_slide_collision(i).collider
-		if "Box" in obj.get_name():
-			var dir = (obj.position-position).normalized()
-			dir.x = round(dir.x)
-			dir.y = round(dir.y)
-			obj.move_and_slide(dir*moveSpeed/2)
+		print("f")
+		var col = get_slide_collision(i)
+		print(col.collider)
+		if "Box" in col.collider.get_name():
+			col.collider.move_and_slide((col.collider.position-position).normalize()*6)
 		
 
 func ChangePersonality():
@@ -83,14 +81,6 @@ func ChangePersonality():
 			personality=PERSONALITIES.corpusculo
 
 func FinishedAttacking():
-	attackNode.attacking=false
 	state=STATES.normal
 	attackArea.disabled=true
 	attackNode.visible=false
-
-#Assign correct scales depending of input direction
-func AssignCorrectDirection(dir:Vector2):
-	if dir.x < 0:
-		set_global_transform(Transform2D(Vector2(-1,0),Vector2(0,1),Vector2(position.x,position.y)))
-	elif dir.x > 0:
-		 set_global_transform(Transform2D(Vector2(1,0),Vector2(0,1),Vector2(position.x,position.y)))
