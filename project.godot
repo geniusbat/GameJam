@@ -8,11 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://Assets/Scripts/InteractableClass.gd"
+} ]
+_global_script_class_icons={
+"Interactable": ""
+}
+
 [application]
 
 config/name="GameJam"
 run/main_scene="res://Levels/Test.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+DescriptionGuiLayer="*res://Assets/Scripts/Singletons/DescriptionGUILayer.gd"
 
 [display]
 

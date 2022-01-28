@@ -1,9 +1,13 @@
 
 extends KinematicBody2D
 
+var health = 5
+
 enum PERSONALITIES {onda, corpusculo}
 var personality = PERSONALITIES.corpusculo
-var changeTimer = 0.2
+var changeTimer = 0.2 #0.2
+
+var hurtTimer = 0.3 #0.3
 
 var moveSpeed = 100
 var inputDir := Vector2()
@@ -49,7 +53,7 @@ func _physics_process(delta):
 				inputDir.x = -1
 			elif Input.is_action_pressed("move_right"):
 				inputDir.x = 1
-			var movement = move_and_slide(inputDir*moveSpeed)
+			var _movement = move_and_slide(inputDir*moveSpeed)
 			if inputDir != Vector2.ZERO:
 				animationPlayer.play("Walk")
 			else:
@@ -58,14 +62,17 @@ func _physics_process(delta):
 		STATES.attacking:
 			pass
 		STATES.hurt:
-			var movement = move_and_slide(direction*moveSpeed)
+			hurtTimer-=delta
+			var _movement = move_and_slide(direction*moveSpeed)
+			if hurtTimer<0:
+				state=STATES.normal
 	PushBoxes()
 
 func PushBoxes():
 	var num = get_slide_count()
 	for i in range(num):
 		var obj = get_slide_collision(i).collider
-		if "Box" in obj.get_name():
+		if obj!=null and "Box" in obj.get_name():
 			var dir = (obj.position-position).normalized()
 			dir.x = round(dir.x)
 			dir.y = round(dir.y)
@@ -82,11 +89,18 @@ func ChangePersonality():
 		PERSONALITIES.onda:
 			personality=PERSONALITIES.corpusculo
 
+func Hurt(dam:int,sourcePoint:Vector2):
+	health-=dam
+	state=STATES.hurt
+	direction = (position-sourcePoint).normalized()
+	hurtTimer=0.3
+
 func FinishedAttacking():
-	attackNode.attacking=false
 	state=STATES.normal
 	attackArea.disabled=true
+	attackNode.attacking=false
 	attackNode.visible=false
+	attackNode.previouslyAttacked.clear()
 
 #Assign correct scales depending of input direction
 func AssignCorrectDirection(dir:Vector2):
