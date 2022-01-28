@@ -15,10 +15,36 @@ func _ready():
 	_a=interactArea.connect("mouse_exited",self,"MouseExited")
 	descriptionGUI = descriptionGUIRes.instance()
 	descriptionGUI.text = description
+	match(requiresCharacter):
+		1:
+			if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+				descriptionGUI.text=description
+			else:
+				descriptionGUI.text=otherDescription
+		2:
+			if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+				descriptionGUI.text=otherDescription
+			else:
+				descriptionGUI.text=description
+		3:
+			descriptionGUI.text=description
 
 func _process(delta):
 	if mouseIn:
 		descriptionGUI.rect_position=get_global_transform_with_canvas().origin-descriptionGUI.rect_size/2
+		match(requiresCharacter):
+			1:
+				if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+					descriptionGUI.text=description
+				else:
+					descriptionGUI.text=otherDescription
+			2:
+				if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+					descriptionGUI.text=otherDescription
+				else:
+					descriptionGUI.text=description
+			3:
+				descriptionGUI.text=description
 
 
 func Interact():

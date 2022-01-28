@@ -83,6 +83,7 @@ func ChangePersonality():
 	changeTimer=0.6
 	var ins = changeParticles.instance()
 	add_child(ins)
+	PlayerInfo.ChangePersonality()
 	match(personality):
 		PERSONALITIES.corpusculo:
 			personality=PERSONALITIES.onda

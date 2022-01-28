@@ -27,6 +27,7 @@ config/icon="res://icon.png"
 [autoload]
 
 DescriptionGuiLayer="*res://Assets/Scripts/Singletons/DescriptionGUILayer.gd"
+PlayerInfo="*res://Assets/Scripts/Singletons/PlayerInfo.gd"
 
 [display]
 
