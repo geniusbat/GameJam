@@ -15,37 +15,39 @@ func _ready():
 	_a=interactArea.connect("mouse_exited",self,"MouseExited")
 	descriptionGUI = descriptionGUIRes.instance()
 	descriptionGUI.text = description
-	match(requiresCharacter):
-		1:
-			if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
-				descriptionGUI.text=description
-			else:
-				descriptionGUI.text=otherDescription
-		2:
-			if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
-				descriptionGUI.text=otherDescription
-			else:
-				descriptionGUI.text=description
-		3:
-			descriptionGUI.text=description
+	MatchText()
+
+func _input(event):
+	if event.is_action_pressed("interact"):
+		if mouseIn:
+			Interact()
 
 func _process(delta):
 	if mouseIn:
 		descriptionGUI.rect_position=get_global_transform_with_canvas().origin-descriptionGUI.rect_size/2
-		match(requiresCharacter):
-			1:
-				if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
-					descriptionGUI.text=description
-				else:
-					descriptionGUI.text=otherDescription
-			2:
-				if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
-					descriptionGUI.text=otherDescription
-				else:
-					descriptionGUI.text=description
-			3:
-				descriptionGUI.text=description
+		MatchText()
 
+func MatchText():
+	if RightPersonality():
+		descriptionGUI.text=description
+	else:
+		descriptionGUI.text=otherDescription
+
+#Check if interacting with the character set with "requireCharacter"
+func RightPersonality():
+	match(requiresCharacter):
+		1:
+			if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+				return true
+			else:
+				return false
+		2:
+			if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+				return false
+			else:
+				return true
+		3:
+			return true
 
 func Interact():
 	pass
