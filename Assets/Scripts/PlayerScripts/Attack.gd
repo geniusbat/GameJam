@@ -1,6 +1,6 @@
 extends Node2D
 
-var attacking = false
+export(bool)var attacking = false
 onready var attackArea = $AttackArea
 
 var previouslyAttacked : Array
