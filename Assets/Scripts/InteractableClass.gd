@@ -3,7 +3,7 @@ extends Node2D
 class_name Interactable
 export(String)var description = "Generic text"
 export(int,1,3)var requiresCharacter = 3 #1 is corpusculo, 2 is onda, 3 is both
-export(String)var corpusculoDescription = "Generic text"
+export(String)var otherDescription = "Generic text 2"
 
 var mouseIn = false
 onready var interactArea : Area2D = $InteractArea
