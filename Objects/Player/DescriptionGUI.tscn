@@ -11,8 +11,10 @@ margin_right = 95.6
 margin_bottom = 75.98
 rect_min_size = Vector2( 182, 56 )
 mouse_filter = 2
-text = "Hola tio que tal estamos eh?"
-fit_content_height = true
+text = "Hola tio que tal estamos eh?
+fdasfdsafdsa
+fdasfdsa
+fdasfdsa"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": true
