@@ -16,7 +16,7 @@ var direction : Vector2
 enum STATES {normal, hurt, attacking}
 var state = STATES.normal
 
-onready var animationPlayer : AnimationPlayer = $AnimationPlayer
+onready var animationPlayer : AnimationPlayer = $AnimationPlayerCorpusculo
 onready var attackNode = $Attack
 onready var attackArea = $Attack/AttackArea/CollisionShape2D
 onready var changeParticles = preload("res://Objects/Player/ChangeParticles.tscn")
@@ -73,7 +73,6 @@ func PushBoxes():
 			dir.x = round(dir.x)
 			dir.y = round(dir.y)
 			obj.move_and_slide(dir*moveSpeed/2)
-		
 
 func ChangePersonality():
 	changeTimer=0.6
@@ -85,6 +84,14 @@ func ChangePersonality():
 			personality=PERSONALITIES.onda
 		PERSONALITIES.onda:
 			personality=PERSONALITIES.corpusculo
+	#Set correct image sprites based on personality
+	animationPlayer.stop()
+	match(personality):
+		PERSONALITIES.corpusculo:
+			animationPlayer=$AnimationPlayerCorpusculo
+		PERSONALITIES.onda:
+			animationPlayer=$AnimationPlayerOnda
+	animationPlayer.play("Idle")
 
 func Hurt(dam:int,sourcePoint:Vector2):
 	health-=dam
