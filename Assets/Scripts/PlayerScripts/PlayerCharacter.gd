@@ -72,7 +72,7 @@ func PushBoxes():
 	var num = get_slide_count()
 	for i in range(num):
 		var obj = get_slide_collision(i).collider
-		if obj!=null and "Box" in obj.get_name():
+		if obj!=null and obj.is_in_group("Pushables"):
 			var dir = (obj.position-position).normalized()
 			dir.x = round(dir.x)
 			dir.y = round(dir.y)

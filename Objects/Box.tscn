@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
 
-[node name="Box" type="KinematicBody2D"]
+[node name="Box" type="KinematicBody2D" groups=["Pushables"]]
 collision_layer = 8
 collision_mask = 62
 script = ExtResource( 2 )
