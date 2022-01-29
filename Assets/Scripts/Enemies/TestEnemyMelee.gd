@@ -64,6 +64,7 @@ func TryToAttack():
 		if meleeRange.get_overlapping_bodies().size()>1:
 			if attackTimer<=0:
 				state=STATES.attack
+				attackTimer=0.9
 				animationPlayer.play("Attack")
 
 func FinishedAttacking():
