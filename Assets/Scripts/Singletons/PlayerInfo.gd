@@ -40,7 +40,7 @@ func _process(_delta):
 			remove_child(healthGUI)
 
 func Die():
-	get_tree().quit()
+	get_tree().change_scene_to(preload("res://Levels/Menus/GameOver.tscn"))
 
 func ChangePersonality():
 	match(personality):
