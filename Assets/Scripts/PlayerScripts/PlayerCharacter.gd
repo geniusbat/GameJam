@@ -8,12 +8,14 @@ var personality = PERSONALITIES.corpusculo
 var changeTimer = 0.2 #0.2
 
 var hurtTimer = 0.3 #0.3
+var dashTimer = 0.2 #0.2
+var dashCooldown = 0.2 #0.2
 
 var moveSpeed = 100
 var inputDir := Vector2()
 var direction : Vector2
 
-enum STATES {normal, hurt, attacking}
+enum STATES {normal, hurt, attacking, dashing}
 var state = STATES.normal
 
 onready var animationPlayer : AnimationPlayer = $AnimationPlayerCorpusculo
@@ -34,10 +36,17 @@ func _unhandled_input(event):
 			if state==STATES.normal:
 				state=STATES.attacking
 				animationPlayer.play("Attack")
+	elif event.is_action_pressed("dash"):
+		if state==STATES.normal and inputDir != Vector2.ZERO and dashCooldown <= 0:
+			dashTimer = 0.2
+			dashCooldown = 0.2
+			state = STATES.dashing
 
 func _physics_process(delta):
 	if changeTimer>0:
 		changeTimer-=delta
+	if dashCooldown>0:
+		dashCooldown-=delta
 	match(state):
 		STATES.normal:
 			inputDir = Vector2()
@@ -49,7 +58,10 @@ func _physics_process(delta):
 				inputDir.x = -1
 			elif Input.is_action_pressed("move_right"):
 				inputDir.x = 1
-			var _movement = move_and_slide(inputDir*moveSpeed)
+			if personality==PERSONALITIES.corpusculo:
+				var _movement = move_and_slide(inputDir*moveSpeed)
+			else:
+				var _movement = move_and_slide(inputDir*moveSpeed*1.2)
 			if inputDir != Vector2.ZERO:
 				animationPlayer.play("Walk")
 			else:
@@ -61,6 +73,11 @@ func _physics_process(delta):
 			hurtTimer-=delta
 			var _movement = move_and_slide(direction*moveSpeed)
 			if hurtTimer<0:
+				state=STATES.normal
+		STATES.dashing:
+			dashTimer-=delta
+			move_and_slide(inputDir*moveSpeed*3)
+			if dashTimer<0:
 				state=STATES.normal
 	PushBoxes()
 
