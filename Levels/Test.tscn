@@ -4,9 +4,9 @@
 [ext_resource path="res://Assets/Sprites/colored_tilemap_packed.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Box.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Objects/PressPlate.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/InteractableTest.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Enemies/TestEnemyMelee.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
@@ -43,5 +43,5 @@ otherDescription = ""
 [node name="Door" parent="." instance=ExtResource( 8 )]
 position = Vector2( 262, 150 )
 
-[node name="TestEnemyMelee" parent="." instance=ExtResource( 9 )]
-position = Vector2( 261, 116 )
+[node name="PressPlate" parent="." instance=ExtResource( 5 )]
+position = Vector2( 397, 163 )
