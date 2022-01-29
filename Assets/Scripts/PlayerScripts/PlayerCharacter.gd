@@ -81,15 +81,16 @@ func _physics_process(delta):
 	PushBoxes()
 
 func PushBoxes():
-	var num = get_slide_count()
-	for i in range(num):
-		var obj = get_slide_collision(i).collider
-		if obj!=null and obj.is_in_group("Pushables"):
-			var dir = (obj.position-position).normalized()
-			dir = Vector2(sign(dir.x)*int(abs(dir.x)>abs(dir.y)),sign(dir.y)*int(abs(dir.y)>abs(dir.x)))
-#			dir.x = round(dir.x)
-#			dir.y = round(dir.y)
-			obj.move_and_slide(dir*moveSpeed/3)
+	if personality==PERSONALITIES.corpusculo:
+		var num = get_slide_count()
+		for i in range(num):
+			var obj = get_slide_collision(i).collider
+			if obj!=null and obj.is_in_group("Pushables"):
+				var dir = (obj.position-position).normalized()
+				dir = Vector2(sign(dir.x)*int(abs(dir.x)>abs(dir.y)),sign(dir.y)*int(abs(dir.y)>abs(dir.x)))
+	#			dir.x = round(dir.x)
+	#			dir.y = round(dir.y)
+				obj.move_and_slide(dir*moveSpeed/3)
 
 func ChangePersonality():
 	changeTimer=0.3
