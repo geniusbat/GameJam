@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://BGM/misteriosa.mp3" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
@@ -131,3 +132,7 @@ goTo = "res://Levels/Movable level 5.tscn"
 [node name="Door2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 156, 207 )
 goTo = "res://Levels/Movable level 4.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true

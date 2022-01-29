@@ -1,12 +1,94 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://Assets/Sprites/v1.1 dungeon crawler 16x16 pixel pack/tiles/floor/floor_1.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Sprites/v1.1 dungeon crawler 16x16 pixel pack/tiles/floor/floor_2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/tilemap/door opened.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/tilemap/door.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/tilemap/black.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/tilemap/rock.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/tilemap/losa.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/tilemap/wall.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/tilemap/LadoInferior.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaArribaDerecha.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/tilemap/LadoSuperior.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaArribaIzquierda.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaAbajoIzquierda.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/tilemap/LadoIzquierdo.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sprites/tilemap/LadoDerecho.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaAbajoDerecha.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaNegraArribaIzquierda.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaNegraAbajoIzquierda.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaNegraAbajoDerecha.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Sprites/tilemap/esquinaNegraArribaDerecha.png" type="Texture" id=18]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Floor1" type="Sprite" parent="."]
+[node name="Rock" type="Sprite" parent="."]
+position = Vector2( 16, 0 )
+texture = ExtResource( 4 )
+
+[node name="Black" type="Sprite" parent="."]
+position = Vector2( 32, 0 )
+texture = ExtResource( 3 )
+
+[node name="Door" type="Sprite" parent="."]
+position = Vector2( 48, 0 )
+texture = ExtResource( 2 )
+
+[node name="DoorOpened" type="Sprite" parent="."]
+position = Vector2( 64, 0 )
 texture = ExtResource( 1 )
 
-[node name="Floor2" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 96, 0 )
+texture = ExtResource( 6 )
+
+[node name="Losa" type="Sprite" parent="."]
+position = Vector2( 80, 0 )
+texture = ExtResource( 5 )
+
+[node name="EsquinaAbajoDerecha" type="Sprite" parent="."]
+position = Vector2( 112, 0 )
+texture = ExtResource( 14 )
+
+[node name="EsquinaArribaDerecha" type="Sprite" parent="."]
+position = Vector2( 144, 0 )
+texture = ExtResource( 8 )
+
+[node name="EsquinaArribaIzquierda" type="Sprite" parent="."]
+position = Vector2( 160, 0 )
+texture = ExtResource( 10 )
+
+[node name="LadoDerecho" type="Sprite" parent="."]
+position = Vector2( 16, 16 )
+texture = ExtResource( 13 )
+
+[node name="LadoInferior" type="Sprite" parent="."]
+position = Vector2( 32, 16 )
+texture = ExtResource( 7 )
+
+[node name="LadoIzquierdo" type="Sprite" parent="."]
+position = Vector2( 48, 16 )
+texture = ExtResource( 12 )
+
+[node name="LadoSuperior" type="Sprite" parent="."]
+position = Vector2( 64, 16 )
+texture = ExtResource( 9 )
+
+[node name="EsquinaAbajoIzquierda" type="Sprite" parent="."]
+position = Vector2( 128, 0 )
+texture = ExtResource( 11 )
+
+[node name="EsquinaNegraAbajoDerecha" type="Sprite" parent="."]
+position = Vector2( 80, 16 )
+texture = ExtResource( 17 )
+
+[node name="EsquinaNegraAbajoIzquierda" type="Sprite" parent="."]
+position = Vector2( 80, 16 )
+texture = ExtResource( 16 )
+
+[node name="EsquinaNegraArribaDerecha" type="Sprite" parent="."]
+position = Vector2( 80, 16 )
+texture = ExtResource( 18 )
+
+[node name="EsquinaNegraArribaIzquierda" type="Sprite" parent="."]
+position = Vector2( 80, 16 )
+texture = ExtResource( 15 )
