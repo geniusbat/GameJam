@@ -138,8 +138,8 @@ position = Vector2( 0.0662727, 0.832855 )
 shape = SubResource( 1 )
 
 [node name="Sprite37" type="Sprite" parent="."]
-position = Vector2( 207.875, 104.047 )
-scale = Vector2( 1.93359, 0.688965 )
+position = Vector2( 207.875, 103.5 )
+scale = Vector2( 1.93359, 0.671873 )
 texture = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite37"]
@@ -177,7 +177,7 @@ goTo = ""
 
 [node name="Door2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 103, 207 )
-goTo = "res://Levels/Movable level 5.tscn"
+goTo = "res://Levels/Movable levels/Movable level 5.tscn"
 
 [node name="Box" parent="." instance=ExtResource( 2 )]
 position = Vector2( 135, 135 )

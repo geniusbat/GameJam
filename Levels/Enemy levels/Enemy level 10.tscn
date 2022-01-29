@@ -99,6 +99,7 @@ tile_data = PoolIntArray( -524296, 1, 0, -458762, 1, 0, -458760, 1, 0, -458753, 
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 200, 87 )
+goTo = "res://Levels/Enemy levels/Enemy level 11.tscn"
 
 [node name="PlayerCharacter" parent="." instance=ExtResource( 2 )]
 position = Vector2( 208, 339 )
