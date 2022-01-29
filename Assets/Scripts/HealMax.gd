@@ -11,5 +11,5 @@ func _process(delta):
 		modulate.a = lerp(modulate.a,1,6*delta)
 
 func _on_HealUp_body_entered(_body):
-	PlayerInfo.health+=5
+	PlayerInfo.health+=10
 	queue_free()
