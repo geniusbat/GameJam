@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://Objects/Enemies/TestEnemyRange.tscn" type="PackedScene" id=4]
 [ext_resource path="res://tilemap/tilemap.tres" type="TileSet" id=5]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Scripts/EnemyLevelScripts/Enemy level 1.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Scripts/EnemyLevelScripts/Enemy level.gd" type="Script" id=7]
+[ext_resource path="res://Objects/Trap.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/HealUp.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
@@ -122,3 +124,48 @@ position = Vector2( 312, 200 )
 
 [node name="PlayerCharacter" parent="." instance=ExtResource( 2 )]
 position = Vector2( 208, 339 )
+
+[node name="Trap" parent="." instance=ExtResource( 8 )]
+position = Vector2( 211, 291 )
+
+[node name="Trap2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 174, 291 )
+
+[node name="Trap3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 251, 291 )
+
+[node name="Trap4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 277, 257 )
+
+[node name="Trap5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 140, 258 )
+
+[node name="Trap6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 125, 215 )
+
+[node name="Trap7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 97, 235 )
+
+[node name="Trap8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 151, 189 )
+
+[node name="Trap9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 276, 183 )
+
+[node name="Trap10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 291, 214 )
+
+[node name="Trap11" parent="." instance=ExtResource( 8 )]
+position = Vector2( 317, 236 )
+
+[node name="Trap12" parent="." instance=ExtResource( 8 )]
+position = Vector2( 207, 151 )
+
+[node name="Trap13" parent="." instance=ExtResource( 8 )]
+position = Vector2( 236, 134 )
+
+[node name="Trap14" parent="." instance=ExtResource( 8 )]
+position = Vector2( 180, 134 )
+
+[node name="HealUp" parent="Trap14" instance=ExtResource( 9 )]
+position = Vector2( 25, -25 )
