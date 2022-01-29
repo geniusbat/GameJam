@@ -10,8 +10,8 @@ var previouslyAttacked : Array
 onready var sprite = $Sprite
 
 func _ready():
-	connect("body_entered",self,"BodyEntered")
-	connect("body_exited",self,"BodyExited")
+	var _a=connect("body_entered",self,"BodyEntered")
+	_a=connect("body_exited",self,"BodyExited")
 	sprite.play("default")
 
 func _process(delta):
@@ -38,7 +38,7 @@ func _process(delta):
 						el.Hurt(1,position)
 						previouslyAttacked.append(el)
 
-func BodyEntered(body):
+func BodyEntered(_body):
 	if !active:
 		previouslyAttacked.clear()
 		attackWait = 0.7
