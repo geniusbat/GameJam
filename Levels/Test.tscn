@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Sprites/colored_tilemap_packed.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Objects/MoveToSceneTrigger.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/InteractableTest.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Levels/Movable level 5.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
@@ -43,3 +44,6 @@ otherDescription = ""
 [node name="MoveToSceneTrigger" parent="." instance=ExtResource( 5 )]
 position = Vector2( 182, 168 )
 goTo = ExtResource( 7 )
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 262, 150 )
