@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "ChangeSceneTrigger",
+"language": "GDScript",
+"path": "res://Assets/Scripts/MoveToSceneTrigger.gd"
+}, {
 "base": "Node2D",
 "class": "Interactable",
 "language": "GDScript",
 "path": "res://Assets/Scripts/InteractableClass.gd"
 } ]
 _global_script_class_icons={
+"ChangeSceneTrigger": "",
 "Interactable": ""
 }
 

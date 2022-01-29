@@ -38,9 +38,10 @@ func _unhandled_input(event):
 				animationPlayer.play("Attack")
 	elif event.is_action_pressed("dash"):
 		if state==STATES.normal and inputDir != Vector2.ZERO and dashCooldown <= 0:
-			dashTimer = 0.2
-			dashCooldown = 0.2
+			dashTimer = 0.3
+			dashCooldown = 0.6
 			state = STATES.dashing
+			direction=inputDir
 
 func _physics_process(delta):
 	if changeTimer>0:
@@ -76,8 +77,8 @@ func _physics_process(delta):
 				state=STATES.normal
 		STATES.dashing:
 			dashTimer-=delta
-			move_and_slide(inputDir*moveSpeed*3)
-			if dashTimer<0:
+			var collision = move_and_collide(direction*moveSpeed*3*delta)
+			if dashTimer<0 or collision!=null:
 				state=STATES.normal
 	PushBoxes()
 
