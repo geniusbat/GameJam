@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/corpusculo.mp3-c8caa3573480bb9d9fb1732ac69b32e8.mp3str"
+
+[deps]
+
+source_file="res://BGM/corpusculo.mp3"
+dest_files=[ "res://.import/corpusculo.mp3-c8caa3573480bb9d9fb1732ac69b32e8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
