@@ -227,11 +227,11 @@ tile_data = PoolIntArray( -851973, 1, 0, -917492, 1, 0, -917491, 1, 0, -917490, 
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 8 )
-goTo = "res://Levels/Movable level 4.tscn"
+goTo = "res://Levels/Enemy levels/Enemy level 7.tscn"
 
 [node name="Door2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 337, 212 )
-goTo = "res://Levels/Movable level 3.tscn"
+goTo = "res://Levels/Movable levels/Movable level 3.tscn"
 
 [node name="Box" parent="." instance=ExtResource( 2 )]
 position = Vector2( 296, 135 )
@@ -240,16 +240,16 @@ position = Vector2( 296, 135 )
 position = Vector2( 265, 55 )
 
 [node name="Box3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 184, 60 )
+position = Vector2( 177, 54 )
 
 [node name="Box6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 167, 56 )
+position = Vector2( 151, 54 )
 
 [node name="Box4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 201, 45 )
+position = Vector2( 197, 40 )
 
 [node name="Box5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 215, 59 )
+position = Vector2( 215, 57 )
 
 [node name="PlayerCharacter" parent="." instance=ExtResource( 1 )]
 position = Vector2( 183, 209 )
