@@ -10,6 +10,6 @@ func _process(delta):
 	else:
 		modulate.a = lerp(modulate.a,1,6*delta)
 
-func _on_HealUp_body_entered(body):
+func _on_HealUp_body_entered(_body):
 	PlayerInfo.health+=1
 	queue_free()

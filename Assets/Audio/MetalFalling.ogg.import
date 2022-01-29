@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MetalFalling.ogg-e098c135096f90b88e79ba7e95be1b40.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/MetalFalling.ogg"
+dest_files=[ "res://.import/MetalFalling.ogg-e098c135096f90b88e79ba7e95be1b40.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
