@@ -8,4 +8,4 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_tree().change_scene_to(preload("res://Levels/Menus/MainMenu.tscn"))
+	var _a=get_tree().change_scene_to(preload("res://Levels/Menus/MainMenu.tscn"))

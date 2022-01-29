@@ -13,6 +13,7 @@ func _process(_delta):
 	$StopSignLayer.offset=Vector2(x*7,y*7)
 
 func GoButtonPressed():
+	PlayerInfo.health=5
 	$AnimationPlayer.play("GoAnim")
 
 func ExitButtonPressed():
