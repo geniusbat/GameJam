@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Box.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://tilemap/tilemap.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/Scripts/MovableLevelScripts/Movable level.gd" type="Script" id=7]
 [ext_resource path="res://Objects/Trap.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/HealUp.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.0663, 32.8329 )
@@ -169,6 +168,3 @@ position = Vector2( 205, 75 )
 
 [node name="Trap2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 192, 155 )
-
-[node name="HealUp" parent="." instance=ExtResource( 9 )]
-position = Vector2( 192, 129 )
