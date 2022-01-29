@@ -3,7 +3,7 @@ extends KinematicBody2D
 var direction : Vector2
 var moveSpeed = 60
 
-var damageTimer = 1 #1
+var damageTimer = 0.1 #1
 
 var previouslyAttacked : Array
 
