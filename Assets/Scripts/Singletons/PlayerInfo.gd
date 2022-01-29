@@ -7,8 +7,13 @@ var personality = PERSONALITIES.corpusculo
 
 var healthGUI
 var healthGUIRes = preload("res://Objects/Player/HealthGUI.tscn")
+onready var backgroundMusic = AudioStreamPlayer.new()
 
 func _ready():
+	add_child(backgroundMusic)
+	backgroundMusic.stream=preload("res://Assets/Audio/BGM/misteriosa.mp3")
+	backgroundMusic.volume_db=-15
+	backgroundMusic.play()
 	healthGUI=healthGUIRes.instance()
 
 func _process(_delta):
