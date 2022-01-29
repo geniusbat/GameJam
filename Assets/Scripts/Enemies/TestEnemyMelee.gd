@@ -50,7 +50,7 @@ func StepProcess():
 
 func TryToAttack():
 	if state==STATES.followPlayer or state==STATES.idle:
-		if meleeRange.get_overlapping_bodies().size()>0:
+		if meleeRange.get_overlapping_bodies().size()>1:
 			if attackTimer<=0:
 				state=STATES.attack
 				animationPlayer.play("Attack")
@@ -64,5 +64,6 @@ func Hurt(dam:int,sourcePoint:Vector2):
 	direction=(position-sourcePoint).normalized()
 	hurtTimer=0.5
 	health-=dam
+	animationPlayer.play("RESET")
 	if health<=0:
 		queue_free()

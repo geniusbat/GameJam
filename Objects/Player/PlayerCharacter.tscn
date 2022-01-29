@@ -1,16 +1,177 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Assets/Sprites/colored_tilemap_packed.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Scripts/PlayerScripts/PlayerCharacter.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Scripts/PlayerScripts/Attack.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Sprites/Player/onda_idle.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Player/corpusculo_walk_senal-sheet.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/Player/corpusculo_attack-Sheet.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/Player/corpusculo_idle_senal-sheet.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/Player/onda_walk.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
 
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 8 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 8 )
+region = Rect2( 268, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 8 )
+region = Rect2( 402, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 5 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 5 )
+region = Rect2( 268, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 5 )
+region = Rect2( 402, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 6 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 9 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 9 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 9 )
+region = Rect2( 268, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 9 )
+region = Rect2( 402, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 7 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 7 )
+region = Rect2( 268, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 7 )
+region = Rect2( 402, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 7 )
+region = Rect2( 670, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 7 )
+region = Rect2( 536, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 6 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 6 )
+region = Rect2( 268, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 6 )
+region = Rect2( 402, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 120, 100 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "CorpusculoIdle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
+"loop": true,
+"name": "OndaIdle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 20 ) ],
+"loop": true,
+"name": "CorpusculoHurt",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 36 ) ],
+"loop": true,
+"name": "OndaHurt",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "OndaWalk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 16 ), SubResource( 16 ), SubResource( 16 ), SubResource( 18 ), SubResource( 18 ), SubResource( 18 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ) ],
+"loop": true,
+"name": "CorpusculoAttack",
+"speed": 16.0
+}, {
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
+"loop": true,
+"name": "Corpusculowalk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 29 ) ],
+"loop": true,
+"name": "CorpusculoDefault",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 31 ), SubResource( 37 ) ],
+"loop": true,
+"name": "OndaDefault",
+"speed": 5.0
+} ]
+
 [sub_resource type="Animation" id=5]
 resource_name = "Attack"
-length = 0.2
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -42,12 +203,76 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.2 ),
+"times": PoolRealArray( 0.4 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "FinishedAttacking"
 } ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "CorpusculoAttack" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimatedSprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Attack:attacking")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "Hurt"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "CorpusculoHurt" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -76,6 +301,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "CorpusculoIdle" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -102,6 +351,30 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Attack:attacking")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "CorpusculoIdle" ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -132,9 +405,294 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 0.0, 10.0, -10.0, 0.0 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Corpusculowalk" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "Attack"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "FinishedAttacking"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "OndaIdle" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimatedSprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Attack:attacking")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "Hurt"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "OndaHurt" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "OndaIdle" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=45]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Attack:attacking")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "OndaIdle" ]
+}
+
+[sub_resource type="Animation" id=46]
+resource_name = "Walk"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 2, -2 ), Vector2( 0, 0 ), Vector2( -2, -2 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, -10.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "OndaWalk" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 2, 7 )
+extents = Vector2( 5, 7 )
 
 [node name="PlayerCharacter" type="KinematicBody2D"]
 collision_layer = 2
@@ -143,17 +701,33 @@ script = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2, -9 )
+scale = Vector2( 0.253731, 0.253731 )
+frames = SubResource( 7 )
+animation = "OndaIdle"
+playing = true
+
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 32, 0, 8, 8 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayerCorpusculo" type="AnimationPlayer" parent="."]
 anims/Attack = SubResource( 5 )
+anims/Hurt = SubResource( 30 )
 anims/Idle = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 anims/Walk = SubResource( 4 )
+
+[node name="AnimationPlayerOnda" type="AnimationPlayer" parent="."]
+anims/Attack = SubResource( 42 )
+anims/Hurt = SubResource( 43 )
+anims/Idle = SubResource( 44 )
+anims/RESET = SubResource( 45 )
+anims/Walk = SubResource( 46 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -169,9 +743,16 @@ collision_mask = 8
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack/AttackArea"]
+position = Vector2( 3, 0 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Attack/AttackArea"]
+position = Vector2( 0, -14 )
+rotation = -0.729293
 shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Attack"]
-position = Vector2( 11, 0 )
-scale = Vector2( 0.0625, 0.21875 )
+visible = false
+position = Vector2( 14, 0 )
+scale = Vector2( 0.15625, 0.21875 )
 texture = ExtResource( 3 )

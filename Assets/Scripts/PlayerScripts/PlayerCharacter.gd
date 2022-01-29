@@ -16,7 +16,7 @@ var direction : Vector2
 enum STATES {normal, hurt, attacking}
 var state = STATES.normal
 
-onready var animationPlayer : AnimationPlayer = $AnimationPlayer
+onready var animationPlayer : AnimationPlayer = $AnimationPlayerCorpusculo
 onready var attackNode = $Attack
 onready var attackArea = $Attack/AttackArea/CollisionShape2D
 onready var changeParticles = preload("res://Objects/Player/ChangeParticles.tscn")
@@ -32,11 +32,7 @@ func _unhandled_input(event):
 	elif event.is_action_pressed("attack"):
 		if personality==PERSONALITIES.corpusculo:
 			if state==STATES.normal:
-				attackNode.attacking=true
 				state=STATES.attacking
-				attackArea.disabled=false
-				attackNode.visible=true
-				attackNode.look_at(get_global_mouse_position())
 				animationPlayer.play("Attack")
 
 func _physics_process(delta):
@@ -77,29 +73,35 @@ func PushBoxes():
 			dir.x = round(dir.x)
 			dir.y = round(dir.y)
 			obj.move_and_slide(dir*moveSpeed/2)
-		
 
 func ChangePersonality():
 	changeTimer=0.6
 	var ins = changeParticles.instance()
 	add_child(ins)
+	PlayerInfo.ChangePersonality()
 	match(personality):
 		PERSONALITIES.corpusculo:
 			personality=PERSONALITIES.onda
 		PERSONALITIES.onda:
 			personality=PERSONALITIES.corpusculo
+	#Set correct image sprites based on personality
+	animationPlayer.stop()
+	match(personality):
+		PERSONALITIES.corpusculo:
+			animationPlayer=$AnimationPlayerCorpusculo
+		PERSONALITIES.onda:
+			animationPlayer=$AnimationPlayerOnda
+	animationPlayer.play("Idle")
 
 func Hurt(dam:int,sourcePoint:Vector2):
 	health-=dam
 	state=STATES.hurt
 	direction = (position-sourcePoint).normalized()
 	hurtTimer=0.3
+	animationPlayer.play("Hurt")
 
 func FinishedAttacking():
 	state=STATES.normal
-	attackArea.disabled=true
-	attackNode.attacking=false
-	attackNode.visible=false
 	attackNode.previouslyAttacked.clear()
 
 #Assign correct scales depending of input direction
