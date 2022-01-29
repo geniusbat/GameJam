@@ -58,7 +58,10 @@ func _physics_process(delta):
 				inputDir.x = -1
 			elif Input.is_action_pressed("move_right"):
 				inputDir.x = 1
-			var _movement = move_and_slide(inputDir*moveSpeed)
+			if personality==PERSONALITIES.corpusculo:
+				var _movement = move_and_slide(inputDir*moveSpeed)
+			else:
+				var _movement = move_and_slide(inputDir*moveSpeed*1.2)
 			if inputDir != Vector2.ZERO:
 				animationPlayer.play("Walk")
 			else:
