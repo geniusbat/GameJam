@@ -14,7 +14,7 @@ func _process(delta):
 		if changeTimer<=0:
 			var _a=get_tree().change_scene_to(load(goTo))
 
-func _on_MoveToSceneTrigger_body_entered(body):
+func _on_MoveToSceneTrigger_body_entered(_body):
 	inside=true
 	$DoorClosed.visible=false
 	$DoorOpened.visible=true

@@ -425,7 +425,7 @@ tracks/3/keys = {
 [sub_resource type="CircleShape2D" id=31]
 radius = 160.0
 
-[node name="TestEnemyRange" type="KinematicBody2D"]
+[node name="TestEnemyRange" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 8
 collision_mask = 14
 script = ExtResource( 1 )
