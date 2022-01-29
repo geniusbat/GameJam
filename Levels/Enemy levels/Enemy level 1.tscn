@@ -3,10 +3,10 @@
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Enemies/TestEnemyMelee.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Audio/BGM/corpusculo.mp3" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Scripts/EnemyLevelScripts/Enemy level 1.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Scripts/EnemyLevelScripts/Enemy level chage music.gd" type="Script" id=5]
 [ext_resource path="res://tilemap/tilemap.tres" type="TileSet" id=6]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Trap.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
@@ -92,10 +92,6 @@ collision_mask = 10
 visible = false
 shape = SubResource( 1 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-autoplay = true
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 6 )
 cell_size = Vector2( 16, 16 )
@@ -111,3 +107,9 @@ position = Vector2( 208, 126 )
 
 [node name="PlayerCharacter" parent="." instance=ExtResource( 2 )]
 position = Vector2( 208, 339 )
+
+[node name="Trap" parent="." instance=ExtResource( 8 )]
+position = Vector2( 162, 259 )
+
+[node name="Trap2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 260, 203 )
