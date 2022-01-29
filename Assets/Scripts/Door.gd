@@ -12,7 +12,7 @@ func _process(delta):
 	if inside:
 		changeTimer-=delta
 		if changeTimer<=0:
-			var _a=get_tree().change_scene_to(goTo)
+			var _a=get_tree().change_scene_to(load(goTo))
 
 func _on_MoveToSceneTrigger_body_entered(_body):
 	inside=true

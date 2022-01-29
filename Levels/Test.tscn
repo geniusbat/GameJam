@@ -53,4 +53,3 @@ position = Vector2( 178, 157 )
 
 [node name="TestEnemyMelee" parent="." instance=ExtResource( 9 )]
 position = Vector2( 316, 70 )
-damaging = false
