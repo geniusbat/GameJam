@@ -1,11 +1,9 @@
 
 extends KinematicBody2D
 
-var health = 5
-
 enum PERSONALITIES {onda, corpusculo}
 var personality = PERSONALITIES.corpusculo
-var changeTimer = 0.2 #0.2
+var changeTimer = 0.3 #0.3
 
 var hurtTimer = 0.3 #0.3
 var dashTimer = 0.2 #0.2
@@ -88,12 +86,13 @@ func PushBoxes():
 		var obj = get_slide_collision(i).collider
 		if obj!=null and obj.is_in_group("Pushables"):
 			var dir = (obj.position-position).normalized()
-			dir.x = round(dir.x)
-			dir.y = round(dir.y)
-			obj.move_and_slide(dir*moveSpeed/2)
+			dir = Vector2(sign(dir.x)*int(abs(dir.x)>abs(dir.y)),sign(dir.y)*int(abs(dir.y)>abs(dir.x)))
+#			dir.x = round(dir.x)
+#			dir.y = round(dir.y)
+			obj.move_and_slide(dir*moveSpeed/3)
 
 func ChangePersonality():
-	changeTimer=0.6
+	changeTimer=0.3
 	var ins = changeParticles.instance()
 	add_child(ins)
 	PlayerInfo.ChangePersonality()
@@ -112,7 +111,7 @@ func ChangePersonality():
 	animationPlayer.play("Idle")
 
 func Hurt(dam:int,sourcePoint:Vector2):
-	health-=dam
+	PlayerInfo.health-=dam
 	state=STATES.hurt
 	direction = (position-sourcePoint).normalized()
 	hurtTimer=0.3
