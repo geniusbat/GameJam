@@ -121,56 +121,20 @@ position = Vector2( 141, 151 )
 [node name="TestEnemyRange7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 266, 154 )
 
-[node name="Trap" parent="." instance=ExtResource( 7 )]
-position = Vector2( 120, 277 )
-
-[node name="Trap2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 147, 253 )
-
-[node name="Trap3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 183, 251 )
-
-[node name="Trap4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 213, 261 )
-
-[node name="Trap5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 242, 243 )
-
 [node name="Trap6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 213, 224 )
 
 [node name="Trap7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 164, 208 )
 
-[node name="Trap8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 160, 299 )
-
-[node name="Trap9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 255, 276 )
-
-[node name="Trap10" parent="." instance=ExtResource( 7 )]
-position = Vector2( 226, 288 )
-
-[node name="Trap11" parent="." instance=ExtResource( 7 )]
-position = Vector2( 285, 300 )
-
-[node name="Trap12" parent="." instance=ExtResource( 7 )]
-position = Vector2( 285, 252 )
-
 [node name="Trap13" parent="." instance=ExtResource( 7 )]
 position = Vector2( 268, 209 )
-
-[node name="Trap14" parent="." instance=ExtResource( 7 )]
-position = Vector2( 314, 270 )
 
 [node name="Trap15" parent="." instance=ExtResource( 7 )]
 position = Vector2( 192, 305 )
 
 [node name="Trap16" parent="." instance=ExtResource( 7 )]
 position = Vector2( 122, 312 )
-
-[node name="Trap17" parent="." instance=ExtResource( 7 )]
-position = Vector2( 92, 296 )
 
 [node name="Trap18" parent="." instance=ExtResource( 7 )]
 position = Vector2( 319, 320 )

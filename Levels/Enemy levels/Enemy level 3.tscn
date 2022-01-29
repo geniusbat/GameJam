@@ -116,14 +116,11 @@ position = Vector2( 208, 118 )
 [node name="PlayerCharacter" parent="." instance=ExtResource( 2 )]
 position = Vector2( 208, 339 )
 
+[node name="Trap4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 316, 111 )
+
 [node name="Trap" parent="." instance=ExtResource( 8 )]
-position = Vector2( 182, 150 )
-
-[node name="Trap" parent="Trap" instance=ExtResource( 8 )]
-position = Vector2( 25, 21 )
-
-[node name="Trap2" parent="Trap" instance=ExtResource( 8 )]
-position = Vector2( 50, -1 )
+position = Vector2( 94, 109 )
 
 [node name="Trap2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 153, 219 )

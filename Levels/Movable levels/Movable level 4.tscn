@@ -163,8 +163,5 @@ position = Vector2( 192, 203 )
 stream = ExtResource( 5 )
 autoplay = true
 
-[node name="Trap" parent="." instance=ExtResource( 8 )]
-position = Vector2( 205, 75 )
-
 [node name="Trap2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 192, 155 )

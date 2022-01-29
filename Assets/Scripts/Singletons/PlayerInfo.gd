@@ -1,6 +1,6 @@
 extends Node
 
-var health = 5
+var health = 10
 
 enum PERSONALITIES {onda, corpusculo}
 var personality = PERSONALITIES.corpusculo
@@ -17,6 +17,7 @@ func _ready():
 	healthGUI=healthGUIRes.instance()
 
 func _process(_delta):
+	CheckHealth()
 	if get_tree().get_root().find_node("PlayerCharacter",true,false)!=null:
 		if !healthGUI.is_inside_tree():
 			add_child(healthGUI)
@@ -38,6 +39,10 @@ func _process(_delta):
 	else:
 		if healthGUI.is_inside_tree():
 			remove_child(healthGUI)
+			
+func CheckHealth():
+	if health > 10:
+		health = 10
 
 func Die():
 	var _a=get_tree().change_scene_to(preload("res://Levels/Menus/GameOver.tscn"))

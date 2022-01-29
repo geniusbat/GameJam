@@ -136,20 +136,8 @@ position = Vector2( 123, 260 )
 [node name="Trap" parent="." instance=ExtResource( 7 )]
 position = Vector2( 172, 310 )
 
-[node name="Trap2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 207, 310 )
-
-[node name="Trap3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 245, 310 )
-
 [node name="Trap4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 278, 310 )
-
-[node name="Trap5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 225, 281 )
-
-[node name="Trap6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 172, 257 )
 
 [node name="Trap7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 207, 257 )
@@ -157,23 +145,11 @@ position = Vector2( 207, 257 )
 [node name="Trap8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 245, 257 )
 
-[node name="Trap9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 279, 257 )
-
 [node name="Trap10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 120, 333 )
 
 [node name="Trap11" parent="." instance=ExtResource( 7 )]
 position = Vector2( 311, 336 )
-
-[node name="Trap12" parent="." instance=ExtResource( 7 )]
-position = Vector2( 304, 188 )
-
-[node name="Trap13" parent="." instance=ExtResource( 7 )]
-position = Vector2( 123, 187 )
-
-[node name="Trap14" parent="." instance=ExtResource( 7 )]
-position = Vector2( 189, 207 )
 
 [node name="Trap15" parent="." instance=ExtResource( 7 )]
 position = Vector2( 226, 210 )
@@ -181,14 +157,5 @@ position = Vector2( 226, 210 )
 [node name="Trap17" parent="." instance=ExtResource( 7 )]
 position = Vector2( 221, 139 )
 
-[node name="Trap18" parent="." instance=ExtResource( 7 )]
-position = Vector2( 184, 139 )
-
-[node name="Trap19" parent="." instance=ExtResource( 7 )]
-position = Vector2( 262, 139 )
-
-[node name="HealUp" parent="Trap19" instance=ExtResource( 8 )]
-position = Vector2( -38, 34 )
-
-[node name="Trap16" parent="." instance=ExtResource( 7 )]
-position = Vector2( 261, 210 )
+[node name="HealUp" parent="." instance=ExtResource( 8 )]
+position = Vector2( 224, 173 )
