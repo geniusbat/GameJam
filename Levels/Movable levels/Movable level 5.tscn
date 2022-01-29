@@ -202,8 +202,8 @@ position = Vector2( 182, 205 )
 [node name="Trap" parent="." instance=ExtResource( 7 )]
 position = Vector2( 136, 203 )
 
-[node name="Trap" parent="Trap" instance=ExtResource( 7 )]
-position = Vector2( 74, -66 )
+[node name="Trap2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 210, 137 )
 
-[node name="HealUp" parent="Trap" instance=ExtResource( 8 )]
-position = Vector2( 140, -132 )
+[node name="HealMax" parent="." instance=ExtResource( 8 )]
+position = Vector2( 201, 72 )
