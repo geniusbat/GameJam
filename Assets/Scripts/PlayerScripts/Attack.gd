@@ -13,3 +13,8 @@ func _physics_process(_delta):
 				if !body in previouslyAttacked:
 					previouslyAttacked.append(body)
 					body.Hurt(1,get_parent().position)
+			#Bounce projectiles and other
+			elif body.has_method("Bounce"):
+				if !body in previouslyAttacked:
+					previouslyAttacked.append(body)
+					body.Bounce((body.position-get_parent().position).normalized())

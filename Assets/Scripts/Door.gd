@@ -6,7 +6,7 @@ var inside = false
 func _ready():
 	$DoorClosed.visible=true
 	$DoorOpened.visible=false
-	connect("body_entered",self,"_on_MoveToSceneTrigger_body_entered")
+	var _a=connect("body_entered",self,"_on_MoveToSceneTrigger_body_entered")
 
 func _process(delta):
 	if inside:
