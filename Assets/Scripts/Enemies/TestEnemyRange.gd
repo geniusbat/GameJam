@@ -6,19 +6,18 @@ var direction : Vector2
 
 enum STATES {idle, followPlayer, attack, hurt}
 var state = STATES.idle
-export(bool) var damaging = false
 
-var previouslyAttacked : Array
-
-var attackTimer = 0.9 #0.9
+var attackTimer = 1.5 #1.5
 var hurtTimer = 0.5 #0.5
 
 onready var player : KinematicBody2D = get_tree().get_root().find_node("PlayerCharacter",true,false)
 onready var animationPlayer : AnimationPlayer = $AnimationPlayer
-onready var meleeRange : Area2D = $MeleePlayer
+onready var detectPlayer = $DetectPlayer
+onready var seePlayer = $SeePlayer
+onready var projectile = preload("res://Objects/Enemies/EnemyProjectile.tscn")
 
 func _physics_process(delta):
-	if attackTimer>0:
+	if attackTimer>=0:
 		attackTimer-=delta
 	match(state):
 		STATES.idle:
@@ -26,51 +25,61 @@ func _physics_process(delta):
 		STATES.followPlayer:
 			var dir = (player.position-position).normalized()
 			var _a=move_and_slide(dir*moveSpeed)
-			dir.x = -dir.x
 			AssignCorrectDirection(dir)
 		STATES.attack:
-			if damaging:
-				for el in meleeRange.get_overlapping_bodies():
-					if not el==self and not el in previouslyAttacked:
-						if el.has_method("Hurt"):
-							el.Hurt(1,position)
-							previouslyAttacked.append(el)
-			#Move towards while attacking
 			var dir = (player.position-position).normalized()
-			var _a=move_and_slide(dir*moveSpeed*0.4)
-			dir.x = -dir.x
 			AssignCorrectDirection(dir)
 		STATES.hurt:
 			var _a=move_and_slide(direction*50)
 			hurtTimer-=delta
-			if hurtTimer<0:
+			if hurtTimer<=0:
 				state=STATES.idle
 				animationPlayer.play("Idle")
 
 func StepProcess():
 	match(state):
 		STATES.idle:
-			state=STATES.followPlayer
-			animationPlayer.play("Walk")
+			if attackTimer<=0 and CanISeePlayer():
+				state=STATES.attack
+				animationPlayer.play("Attack")
+				attackTimer=1.5
+			else:
+				if position.distance_to(player.position)<160:
+					state=STATES.idle
+					animationPlayer.play("Idle")
+				else:
+					state=STATES.followPlayer
+					animationPlayer.play("Walk")
 		STATES.followPlayer:
-			TryToAttack()
+				if position.distance_to(player.position)<160:
+					if attackTimer<=0 and CanISeePlayer():
+						state=STATES.attack
+						animationPlayer.play("Attack")
+						attackTimer=1.5
+					else:
+						state=STATES.idle
+						animationPlayer.play("Idle")
 		STATES.attack:
 			pass
 		STATES.hurt:
 			pass
 
-func TryToAttack():
-	if state==STATES.followPlayer or state==STATES.idle:
-		if meleeRange.get_overlapping_bodies().size()>1:
-			if attackTimer<=0:
-				state=STATES.attack
-				animationPlayer.play("Attack")
+func Shoot():
+	var ins = projectile.instance()
+	ins.direction=(player.position-position).normalized()
+	ins.position=position
+	get_parent().add_child(ins)
 
 func FinishedAttacking():
 	state=STATES.idle
-	animationPlayer.play("Idle")
-	previouslyAttacked.clear()
-	damaging=false
+
+func CanISeePlayer():
+	if player in detectPlayer.get_overlapping_bodies():
+		seePlayer.cast_to=seePlayer.to_local(player.position)
+		seePlayer.force_raycast_update()
+		if seePlayer.get_collider()==player:
+			return true
+	return false
 
 func Hurt(dam:int,sourcePoint:Vector2):
 	animationPlayer.play("Hurt")
