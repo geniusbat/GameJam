@@ -11,7 +11,6 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
 
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
 
@@ -121,6 +120,3 @@ position = Vector2( 200, 205 )
 
 [node name="Trap" parent="." instance=ExtResource( 7 )]
 position = Vector2( 173, 164 )
-
-[node name="Trap2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 212, 133 )
