@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://Assets/Scripts/MoveToSceneTrigger.gd"
 }, {
 "base": "Node2D",
+"class": "ClearRoom",
+"language": "GDScript",
+"path": "res://Assets/Scripts/ClearRoomClass.gd"
+}, {
+"base": "Node2D",
 "class": "Interactable",
 "language": "GDScript",
 "path": "res://Assets/Scripts/InteractableClass.gd"
 } ]
 _global_script_class_icons={
 "ChangeSceneTrigger": "",
+"ClearRoom": "",
 "Interactable": ""
 }
 
