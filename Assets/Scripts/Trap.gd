@@ -29,7 +29,6 @@ func _process(delta):
 				active=false
 				sprite.play("default")
 		attackWait-=delta
-		print(attackWait)
 		if attackWait<=0:
 			var bodies = get_overlapping_bodies()
 			for el in bodies:
@@ -37,6 +36,11 @@ func _process(delta):
 					if not el in previouslyAttacked:
 						el.Hurt(1,position)
 						previouslyAttacked.append(el)
+	#Change alpha based on personality
+	if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+		modulate.a = lerp(modulate.a,0.1,6*delta)
+	else:
+		modulate.a = lerp(modulate.a,1,6*delta)
 
 func BodyEntered(_body):
 	if !active:

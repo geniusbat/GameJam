@@ -61,7 +61,7 @@ func StepProcess():
 
 func TryToAttack():
 	if state==STATES.followPlayer or state==STATES.idle:
-		if meleeRange.get_overlapping_bodies().size()>1:
+		if meleeRange.get_overlapping_bodies().size()>0:
 			if attackTimer<=0:
 				state=STATES.attack
 				attackTimer=0.9

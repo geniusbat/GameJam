@@ -53,38 +53,6 @@ region = Rect2( 670, 0, 134, 139 )
 atlas = ExtResource( 7 )
 region = Rect2( 536, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 120, 100 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 9 )
-region = Rect2( 134, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 8 )
-region = Rect2( 134, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 8 )
-region = Rect2( 268, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 8 )
-region = Rect2( 402, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 134, 139 )
-
 [sub_resource type="AtlasTexture" id=32]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 134, 139 )
@@ -100,6 +68,18 @@ region = Rect2( 268, 0, 134, 139 )
 [sub_resource type="AtlasTexture" id=35]
 atlas = ExtResource( 9 )
 region = Rect2( 402, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 120, 100 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 6 )
+region = Rect2( 134, 0, 134, 139 )
 
 [sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 6 )
@@ -117,9 +97,29 @@ region = Rect2( 268, 0, 134, 139 )
 atlas = ExtResource( 6 )
 region = Rect2( 402, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 6 )
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 8 )
 region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 8 )
+region = Rect2( 268, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 8 )
+region = Rect2( 402, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 9 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 134, 139 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
@@ -133,29 +133,19 @@ animations = [ {
 "name": "CorpusculoAttack",
 "speed": 16.0
 }, {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "OndaWalk",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 31 ), SubResource( 37 ) ],
 "loop": true,
 "name": "OndaDefault",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 36 ) ],
+"frames": [ SubResource( 20 ) ],
 "loop": true,
-"name": "OndaHurt",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
-"loop": true,
-"name": "CorpusculoIdle",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 29 ) ],
-"loop": true,
-"name": "CorpusculoDefault",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
-"loop": true,
-"name": "OndaWalk",
+"name": "CorpusculoHurt",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
@@ -163,9 +153,19 @@ animations = [ {
 "name": "Corpusculowalk",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 20 ) ],
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
-"name": "CorpusculoHurt",
+"name": "CorpusculoIdle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 36 ) ],
+"loop": true,
+"name": "OndaHurt",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 29 ) ],
+"loop": true,
+"name": "CorpusculoDefault",
 "speed": 5.0
 } ]
 
@@ -732,7 +732,6 @@ anims/Walk = SubResource( 46 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.5, 0.5 )
 
 [node name="Attack" type="Node2D" parent="."]
 script = ExtResource( 4 )
