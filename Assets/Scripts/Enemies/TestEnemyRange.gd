@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
-var health = 2
+var health = 1
 var moveSpeed = 40
 var direction : Vector2
 
 enum STATES {idle, followPlayer, attack, hurt}
 var state = STATES.idle
 
-var attackTimer = 1.5 #1.5
+var attackTimer = 2 #2
 var hurtTimer = 0.5 #0.5
 
 onready var player : KinematicBody2D = get_tree().get_root().find_node("PlayerCharacter",true,false)
@@ -42,7 +42,7 @@ func StepProcess():
 			if attackTimer<=0 and CanISeePlayer():
 				state=STATES.attack
 				animationPlayer.play("Attack")
-				attackTimer=1.5
+				attackTimer=2
 			else:
 				if position.distance_to(player.position)<160:
 					state=STATES.idle
@@ -55,7 +55,7 @@ func StepProcess():
 					if attackTimer<=0 and CanISeePlayer():
 						state=STATES.attack
 						animationPlayer.play("Attack")
-						attackTimer=1.5
+						attackTimer=2
 					else:
 						state=STATES.idle
 						animationPlayer.play("Idle")

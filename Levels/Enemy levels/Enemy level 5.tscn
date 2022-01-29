@@ -129,10 +129,10 @@ position = Vector2( 208, 339 )
 position = Vector2( 211, 291 )
 
 [node name="Trap6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 125, 215 )
+position = Vector2( 137, 225 )
 
 [node name="Trap10" parent="." instance=ExtResource( 8 )]
-position = Vector2( 291, 214 )
+position = Vector2( 277, 223 )
 
 [node name="Trap13" parent="." instance=ExtResource( 8 )]
 position = Vector2( 236, 134 )
