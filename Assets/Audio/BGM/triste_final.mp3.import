@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/triste_final.mp3-1b520b1c0e1f2a240e10c0f6e617c0dd.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/BGM/triste_final.mp3"
+dest_files=[ "res://.import/triste_final.mp3-1b520b1c0e1f2a240e10c0f6e617c0dd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

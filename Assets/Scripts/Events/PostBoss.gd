@@ -10,7 +10,7 @@ var time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	PlayerInfo.backgroundMusic.stream=preload("res://Assets/Audio/BGM/melancolica.mp3")
+	PlayerInfo.backgroundMusic.stream=preload("res://Assets/Audio/BGM/triste_final.mp3")
 	PlayerInfo.backgroundMusic.volume_db=-25
 	PlayerInfo.backgroundMusic.play()
 
