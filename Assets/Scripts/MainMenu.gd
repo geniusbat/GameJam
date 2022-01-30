@@ -4,6 +4,9 @@ func _ready():
 	#Adeptus mechanicus moment, leave this here bc it works
 	$StopSignLayer/TextureRect.rect_size=Vector2(480,270)
 	$BackgroundLayer/TextureRect.rect_size=Vector2(509,286)
+	PlayerInfo.backgroundMusic.stream=preload("res://Assets/Audio/BGM/onda.mp3")
+	PlayerInfo.backgroundMusic.volume_db=-15
+	PlayerInfo.backgroundMusic.play()
 
 
 func _process(_delta):
