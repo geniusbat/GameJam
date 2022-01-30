@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/super_boss_ultimate (1).mp3-3bd99059142b2810cc64555181cc6012.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/BGM/super_boss_ultimate (1).mp3"
+dest_files=[ "res://.import/super_boss_ultimate (1).mp3-3bd99059142b2810cc64555181cc6012.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
