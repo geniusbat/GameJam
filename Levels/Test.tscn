@@ -44,7 +44,7 @@ position = Vector2( 270, 121 )
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 185, 182 )
 requiresCharacter = 2
-otherDescription = ""
+otherDescription = "A shuparla"
 
 [node name="Door" parent="." instance=ExtResource( 8 )]
 position = Vector2( 262, 150 )
