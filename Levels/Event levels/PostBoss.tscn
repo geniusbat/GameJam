@@ -12,9 +12,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="End2" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 240, 135.5 )
+scale = Vector2( 0.5, 0.501852 )
+texture = ExtResource( 3 )
+
 [node name="End" type="Sprite" parent="."]
-position = Vector2( 240, 135 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 240, 104.5 )
+scale = Vector2( 0.5, 0.387037 )
 texture = ExtResource( 3 )
 
 [node name="Oscar" type="ColorRect" parent="."]
