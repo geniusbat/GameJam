@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/convertirse-1.mp3-0f9abfdc1cdf971d952ea474e9fe3139.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/convertirse-1.mp3"
+dest_files=[ "res://.import/convertirse-1.mp3-0f9abfdc1cdf971d952ea474e9fe3139.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

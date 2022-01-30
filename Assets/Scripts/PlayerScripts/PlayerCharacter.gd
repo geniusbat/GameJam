@@ -27,11 +27,11 @@ func _ready():
 	if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
 		PlayerInfo.personality=PlayerInfo.PERSONALITIES.onda
 		personality=PERSONALITIES.onda
-		ChangePersonality()
+		ChangePersonality(true)
 	else:
 		personality=PERSONALITIES.corpusculo
 		PlayerInfo.personality=PlayerInfo.PERSONALITIES.corpusculo
-		ChangePersonality()
+		ChangePersonality(true)
 
 func _unhandled_input(event):
 	if event.is_action_pressed("change"):
@@ -100,10 +100,11 @@ func PushBoxes():
 	#			dir.y = round(dir.y)
 				obj.move_and_slide(dir*moveSpeed/3)
 
-func ChangePersonality():
+func ChangePersonality(noSound=false):
 	changeTimer=0.3
-	var ins = changeParticles.instance()
-	add_child(ins)
+	if !noSound:
+		var ins = changeParticles.instance()
+		add_child(ins)
 	PlayerInfo.ChangePersonality()
 	match(personality):
 		PERSONALITIES.corpusculo:
@@ -118,6 +119,9 @@ func ChangePersonality():
 		PERSONALITIES.onda:
 			animationPlayer=$AnimationPlayerOnda
 	animationPlayer.play("Idle")
+	if !noSound:
+		if !$ChangeAudio.playing:
+			$ChangeAudio.play()
 
 func Hurt(dam:int,sourcePoint:Vector2):
 	PlayerInfo.health-=dam
@@ -125,6 +129,7 @@ func Hurt(dam:int,sourcePoint:Vector2):
 	direction = (position-sourcePoint).normalized()
 	hurtTimer=0.3
 	animationPlayer.play("Hurt")
+	$HurtAudio.play()
 
 func FinishedAttacking():
 	state=STATES.normal

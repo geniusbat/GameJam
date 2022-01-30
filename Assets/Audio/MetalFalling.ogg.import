@@ -11,5 +11,5 @@ dest_files=[ "res://.import/MetalFalling.ogg-e098c135096f90b88e79ba7e95be1b40.og
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

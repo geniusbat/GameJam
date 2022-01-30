@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/puerta.mp3-c52a3295c5d99350e3fddd38c9df125d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/puerta.mp3"
+dest_files=[ "res://.import/puerta.mp3-c52a3295c5d99350e3fddd38c9df125d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
