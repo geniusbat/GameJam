@@ -41,7 +41,7 @@ func MatchText():
 			descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
 		else:
 			descriptionGUI.visible=true
-			descriptionGUI.rect_size=Vector2(100,56)
+#			descriptionGUI.rect_size=Vector2(150,56)
 			descriptionGUI.text=otherDescription
 			descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
 
