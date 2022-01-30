@@ -63,7 +63,10 @@ func Hurt(dam,_sourcePoint):
 			Die()
 
 func Die():
-	yield(get_tree().create_timer(0.4), "timeout")
+	visible=false
+	set_collision_layer_bit(3,false)
+	$DamageArea.monitoring=false
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene_to(load("res://Levels/Event levels/PostBoss.tscn"))
 
 func DonedStun():
