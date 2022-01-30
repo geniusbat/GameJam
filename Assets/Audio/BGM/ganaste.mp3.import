@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ganaste.mp3-3fd7228cc96e4777235dc4494a60c2d8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/BGM/ganaste.mp3"
+dest_files=[ "res://.import/ganaste.mp3-3fd7228cc96e4777235dc4494a60c2d8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
