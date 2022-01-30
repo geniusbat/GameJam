@@ -8,7 +8,7 @@
 [ext_resource path="res://Objects/InteractableTest.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/Trap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Enemies/Boss/BossA.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Enemies/Boss/BossB.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/HealUp.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -55,5 +55,5 @@ position = Vector2( 397, 163 )
 [node name="HealUp" parent="." instance=ExtResource( 11 )]
 position = Vector2( 387, 127 )
 
-[node name="BossA" parent="." instance=ExtResource( 10 )]
-position = Vector2( 326, 122 )
+[node name="BossB" parent="." instance=ExtResource( 9 )]
+position = Vector2( 446, 109 )
