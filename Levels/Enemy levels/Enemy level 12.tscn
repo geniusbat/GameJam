@@ -159,4 +159,4 @@ position = Vector2( 30, -21 )
 position = Vector2( -27, -20 )
 
 [node name="Stage03" type="Node2D" parent="."]
-position = Vector2( 206, -758 )
+position = Vector2( 206, -824 )
