@@ -9,6 +9,10 @@ var hasPlayed = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if PlayerInfo.stream!=preload("res://Assets/Audio/BGM/corpusculo.mp3"):
+		PlayerInfo.backgroundMusic.stream=preload("res://Assets/Audio/BGM/corpusculo.mp3")
+		PlayerInfo.backgroundMusic.volume_db=-25
+		PlayerInfo.backgroundMusic.play()
 	$Door.monitoring = false
 	pass # Replace with function body.
 	
