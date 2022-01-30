@@ -12,7 +12,7 @@ onready var backgroundMusic = AudioStreamPlayer.new()
 func _ready():
 	add_child(backgroundMusic)
 	backgroundMusic.stream=preload("res://Assets/Audio/BGM/misteriosa.mp3")
-	backgroundMusic.volume_db=-15
+	backgroundMusic.volume_db=-10
 	backgroundMusic.play()
 	healthGUI=healthGUIRes.instance()
 
@@ -39,7 +39,12 @@ func _process(_delta):
 	else:
 		if healthGUI.is_inside_tree():
 			remove_child(healthGUI)
-			
+	if backgroundMusic.stream==preload("res://Assets/Audio/BGM/corpusculo.mp3"):
+		backgroundMusic.volume_db=-25
+	else:
+		backgroundMusic.volume_db=-10
+
+
 func CheckHealth():
 	if health > 10:
 		health = 10

@@ -9,7 +9,7 @@ extends ClearRoom
 func _ready():
 	$Door.monitoring = false
 	PlayerInfo.backgroundMusic.stream=preload("res://Assets/Audio/BGM/corpusculo.mp3")
-	PlayerInfo.backgroundMusic.volume_db=-15
+	PlayerInfo.backgroundMusic.volume_db=-25
 	PlayerInfo.backgroundMusic.play()
 	pass # Replace with function body.
 	
