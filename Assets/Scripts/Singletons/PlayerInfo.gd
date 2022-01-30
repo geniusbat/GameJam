@@ -20,9 +20,9 @@ func _ready():
 
 func Go():
 	if lastLevel!="":
-		get_tree().change_scene_to(load(lastLevel))
+		var _a=get_tree().change_scene_to(load(lastLevel))
 	else:
-		get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
+		var _a=get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
 
 func _process(_delta):
 	CheckHealth()
