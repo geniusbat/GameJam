@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Box.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/Scripts/MovableLevelScripts/Movable level.gd" type="Script" id=6]
 [ext_resource path="res://Objects/Trap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/HealMax.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Statue.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.0663, 32.8329 )
@@ -180,10 +181,6 @@ tile_data = PoolIntArray( -589835, 1, 0, -589828, 1, 0, -524299, 1, 0, -524292, 
 position = Vector2( 200, 55 )
 goTo = ""
 
-[node name="Door2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 103, 207 )
-goTo = "res://Levels/Movable levels/Movable level 5.tscn"
-
 [node name="Box" parent="." instance=ExtResource( 2 )]
 position = Vector2( 135, 135 )
 
@@ -207,3 +204,7 @@ position = Vector2( 159, 135 )
 
 [node name="HealMax" parent="." instance=ExtResource( 8 )]
 position = Vector2( 201, 72 )
+
+[node name="Door2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 100, 205 )
+goTo = "res://Levels/Movable levels/Movable level 5.tscn"
