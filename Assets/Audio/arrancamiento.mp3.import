@@ -11,5 +11,5 @@ dest_files=[ "res://.import/arrancamiento.mp3-daa1e91dfa1391e8e24f5492316daa63.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

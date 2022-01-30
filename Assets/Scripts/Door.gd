@@ -1,6 +1,6 @@
 extends ChangeSceneTrigger
 
-var changeTimer = 0.2 #0.2
+var changeTimer = 0.4 #0.4
 var inside = false
 
 func _ready():
@@ -15,6 +15,8 @@ func _process(delta):
 			var _a=get_tree().change_scene_to(load(goTo))
 
 func _on_MoveToSceneTrigger_body_entered(_body):
-	inside=true
-	$DoorClosed.visible=false
-	$DoorOpened.visible=true
+	if !inside:
+		$AudioStreamPlayer.play()
+		inside=true
+		$DoorClosed.visible=false
+		$DoorOpened.visible=true
