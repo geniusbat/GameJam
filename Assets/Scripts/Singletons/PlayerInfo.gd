@@ -5,6 +5,8 @@ var health = 10
 enum PERSONALITIES {onda, corpusculo}
 var personality = PERSONALITIES.onda
 
+var lastLevel : String = ""
+
 var healthGUI
 var healthGUIRes = preload("res://Objects/Player/HealthGUI.tscn")
 onready var backgroundMusic = AudioStreamPlayer.new()
@@ -13,8 +15,14 @@ func _ready():
 	add_child(backgroundMusic)
 	backgroundMusic.stream=preload("res://Assets/Audio/BGM/misteriosa.mp3")
 	backgroundMusic.volume_db=-10
-	backgroundMusic.play()
+#	backgroundMusic.play()
 	healthGUI=healthGUIRes.instance()
+
+func Go():
+	if lastLevel!="":
+		get_tree().change_scene_to(load(lastLevel))
+	else:
+		get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
 
 func _process(_delta):
 	CheckHealth()

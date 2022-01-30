@@ -32,17 +32,17 @@ func _process(_delta):
 func MatchText():
 	if RightPersonality():
 		descriptionGUI.text=description
-		descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
+		#descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
 		descriptionGUI.visible=true
 	else:
 		if otherDescription=="":
 			descriptionGUI.text=description
-			descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
+			#descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
 			descriptionGUI.visible=false
 		else:
 #			descriptionGUI.rect_size=Vector2(150,56)
 			descriptionGUI.text=otherDescription
-			descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
+			#descriptionGUI.rect_size=Vector2(182,descriptionGUI.get_content_height())
 			descriptionGUI.visible=true
 
 #Check if interacting with the character set with "requireCharacter"

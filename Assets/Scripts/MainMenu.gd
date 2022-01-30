@@ -23,4 +23,5 @@ func ExitButtonPressed():
 	get_tree().quit()
 
 func Go():
-	var _a = get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
+#	var _a = get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
+	PlayerInfo.Go()
