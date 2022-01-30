@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/FontRes.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Scripts/Events/PreBoss.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Events/Corpúsculo.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Events/Onda.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Events/Oscar.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Events/Fondo rojo.png" type="Texture" id=6]
+
+[node name="Conversation" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FondoAmarillo" type="Sprite" parent="."]
+position = Vector2( 238.222, 103 )
+scale = Vector2( 0.503704, 0.388889 )
+texture = ExtResource( 6 )
+
+[node name="OscarImagen" type="Sprite" parent="."]
+position = Vector2( 355, 97.5 )
+scale = Vector2( 0.308, 0.308 )
+texture = ExtResource( 5 )
+
+[node name="CorpusculoImagen" type="Sprite" parent="."]
+visible = false
+position = Vector2( 84, 97.5 )
+scale = Vector2( 0.308333, 0.308333 )
+texture = ExtResource( 3 )
+
+[node name="OndaImagen" type="Sprite" parent="."]
+position = Vector2( 84, 97.5 )
+scale = Vector2( 0.308, 0.308 )
+texture = ExtResource( 4 )
+
+[node name="Oscar" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 180.0
+color = Color( 0.498039, 0.427451, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Corpusculo" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 180.0
+color = Color( 0.215686, 0.215686, 0.215686, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Onda" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 180.0
+color = Color( 0.792157, 0.792157, 0.792157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.158
+anchor_top = 0.37
+anchor_right = 0.842
+anchor_bottom = 0.63
+margin_left = -68.84
+margin_top = 89.1
+margin_right = 66.84
+margin_bottom = 88.9
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Veo que no voy a ser capaz de hacer que te rindas."
+__meta__ = {
+"_edit_use_anchors_": false
+}

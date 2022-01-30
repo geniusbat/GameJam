@@ -63,7 +63,7 @@ func Hurt(dam,_sourcePoint):
 			Die()
 
 func Die():
-	queue_free()
+	get_tree().change_scene_to(load("res://Levels/Event levels/PostBoss.tscn"))
 
 func DonedStun():
 	state=STATES.normal

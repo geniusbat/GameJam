@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/FontRes.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Scripts/Events/PostBoss.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Events/End.png" type="Texture" id=3]
+
+[node name="Conversation" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="End" type="Sprite" parent="."]
+position = Vector2( 240, 135 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Oscar" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 180.0
+color = Color( 0.498039, 0.427451, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Corpusculo" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 180.0
+color = Color( 0.215686, 0.215686, 0.215686, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Onda" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 180.0
+color = Color( 0.792157, 0.792157, 0.792157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.158
+anchor_top = 0.37
+anchor_right = 0.842
+anchor_bottom = 0.63
+margin_left = -68.84
+margin_top = 89.1
+margin_right = 66.84
+margin_bottom = 88.9
+custom_fonts/normal_font = ExtResource( 1 )
+text = "¿Oscar?"
+__meta__ = {
+"_edit_use_anchors_": false
+}

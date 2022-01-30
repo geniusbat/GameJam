@@ -40,7 +40,7 @@ __meta__ = {
 position = Vector2( 240, 135 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Button" type="Button" parent="."]
@@ -71,7 +71,7 @@ margin_top = 27.0
 margin_right = 419.0
 margin_bottom = 48.0
 custom_fonts/font = ExtResource( 3 )
-text = "Lost"
+text = "Loose"
 __meta__ = {
 "_edit_use_anchors_": false
 }
