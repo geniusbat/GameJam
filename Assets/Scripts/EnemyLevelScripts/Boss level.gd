@@ -9,7 +9,7 @@ extends Node2D
 func _ready():
 	if PlayerInfo.backgroundMusic.stream!=preload("res://Assets/Audio/BGM/super_boss_ultimate (1).mp3"):
 		PlayerInfo.backgroundMusic.stream=preload("res://Assets/Audio/BGM/super_boss_ultimate (1).mp3")
-		PlayerInfo.backgroundMusic.volume_db=-25
+		PlayerInfo.backgroundMusic.volume_db=-30
 		PlayerInfo.backgroundMusic.play()
 
 
