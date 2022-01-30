@@ -13,11 +13,11 @@ func _process(_delta):
 	$StopSignLayer.offset=Vector2(x*7,y*7)
 
 func GoButtonPressed():
-	PlayerInfo.health=5
+	PlayerInfo.health=10
 	$AnimationPlayer.play("GoAnim")
 
 func ExitButtonPressed():
 	get_tree().quit()
 
 func Go():
-	var _a = get_tree().change_scene_to(preload("res://Levels/Test.tscn"))
+	var _a = get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
