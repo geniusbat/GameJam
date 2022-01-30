@@ -64,9 +64,10 @@ func RightPersonality():
 func Interact():
 	print_debug("Interacted")
 
-func BodyEntered(_body):
-	bodyIn = true
-	DescriptionGuiLayer.add_child(descriptionGUI)
+func BodyEntered(body):
+	if body.get_name() == "PlayerCharacter":
+		bodyIn = true
+		DescriptionGuiLayer.add_child(descriptionGUI)
 
 func BodyExited(_body):
 	bodyIn = false
