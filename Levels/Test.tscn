@@ -8,7 +8,7 @@
 [ext_resource path="res://Objects/InteractableTest.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/Trap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Enemies/TestEnemyMelee.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Enemies/Boss/BossA.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/HealUp.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -39,7 +39,7 @@ collision_layer = 3855
 shape = SubResource( 1 )
 
 [node name="PlayerCharacter" parent="." instance=ExtResource( 1 )]
-position = Vector2( 270, 121 )
+position = Vector2( 328, 178 )
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 185, 182 )
@@ -52,8 +52,8 @@ position = Vector2( 262, 150 )
 [node name="PressPlate" parent="." instance=ExtResource( 5 )]
 position = Vector2( 397, 163 )
 
-[node name="TestEnemyMelee" parent="." instance=ExtResource( 9 )]
-position = Vector2( 446, 27 )
-
 [node name="HealUp" parent="." instance=ExtResource( 11 )]
 position = Vector2( 387, 127 )
+
+[node name="BossA" parent="." instance=ExtResource( 10 )]
+position = Vector2( 326, 122 )
