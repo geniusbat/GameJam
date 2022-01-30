@@ -44,6 +44,7 @@ func _physics_process(delta):
 				if damageAgainTimer<=0:
 					damaged=false
 			var col = move_and_collide(direction*moveSpeed*delta)
+			AssignCorrectDirection(direction)
 			if col!=null and col.collider.get_name()!="PlayerCharacter":
 				state=STATES.stun
 				animationPlayer.play("Stun")
@@ -73,3 +74,10 @@ func DoneHurt():
 	state=STATES.normal
 	animationPlayer.play("Idle")
 	chargeUpTimer=1
+
+
+func AssignCorrectDirection(dir:Vector2):
+	if dir.x < 0:
+		set_global_transform(Transform2D(Vector2(-1,0),Vector2(0,1),Vector2(position.x,position.y)))
+	elif dir.x > 0:
+		 set_global_transform(Transform2D(Vector2(1,0),Vector2(0,1),Vector2(position.x,position.y)))
