@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Box.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://tilemap/tilemap.tres" type="TileSet" id=5]
 [ext_resource path="res://Assets/Scripts/MovableLevelScripts/Movable level.gd" type="Script" id=6]
 [ext_resource path="res://Objects/Trap.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Statue.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
@@ -98,22 +99,22 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 65547, 6, 0, 65548, 10, 0, 65549, 13, 0, 65554, 1, 0, 131081, 6, 0, 131082, 10, 0, 131083, 17, 0, 131084, 4, 0, 131085, 16, 0, 131086, 13, 0, 131087, 1, 0, 131088, 1, 0, 131089, 1, 0, 131090, 1, 0, 196617, 9, 0, 196618, 18, 0, 196619, 4, 0, 196621, 4, 0, 196622, 11, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 262153, 9, 0, 262154, 5, 0, 262155, 5, 0, 262156, 5, 0, 262157, 5, 0, 262158, 11, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 1, 0, 327689, 9, 0, 327690, 5, 0, 327691, 5, 0, 327692, 5, 0, 327693, 5, 0, 327694, 11, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 393225, 9, 0, 393226, 5, 0, 393227, 5, 0, 393228, 5, 0, 393229, 5, 0, 393230, 11, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 458761, 9, 0, 458762, 5, 0, 458763, 5, 0, 458764, 5, 0, 458765, 5, 0, 458766, 11, 0, 458767, 1, 0, 458768, 1, 0, 458769, 1, 0, 524297, 9, 0, 524298, 5, 0, 524299, 5, 0, 524300, 23, 0, 524301, 5, 0, 524302, 11, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 589833, 9, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 16, 0, 589839, 10, 0, 589840, 13, 0, 589841, 1, 0, 655369, 9, 0, 655370, 5, 0, 655371, 5, 0, 655372, 5, 0, 655373, 5, 0, 655374, 4, 0, 655375, 4, 0, 655376, 11, 0, 655377, 1, 0, 720905, 9, 0, 720906, 5, 0, 720907, 23, 0, 720908, 5, 0, 720909, 5, 0, 720910, 5, 0, 720911, 23, 0, 720912, 11, 0, 720913, 1, 0, 786441, 9, 0, 786442, 5, 0, 786443, 5, 0, 786444, 5, 0, 786445, 5, 0, 786446, 5, 0, 786447, 5, 0, 786448, 11, 0, 786449, 1, 0, 851977, 9, 0, 851978, 5, 0, 851979, 5, 0, 851980, 5, 0, 851981, 5, 0, 851982, 5, 0, 851983, 5, 0, 851984, 11, 0, 851985, 1, 0, 917513, 7, 0, 917514, 12, 0, 917515, 12, 0, 917516, 12, 0, 917517, 12, 0, 917518, 12, 0, 917519, 12, 0, 917520, 8, 0, 917521, 1, 0, 983057, 1, 0, 1048593, 1, 0, 1114129, 1, 0, 1179665, 1, 0, 1245201, 1, 0, 1310737, 1, 0 )
 
-[node name="Door2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 237, 197 )
-goTo = "res://Levels/Movable levels/Movable level 2.tscn"
-
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 55 )
 goTo = "res://Levels/Enemy levels/Enemy level 4.tscn"
 
+[node name="Statue" parent="." instance=ExtResource( 8 )]
+position = Vector2( 237, 201 )
+goTo = "res://Levels/Movable levels/Movable level 2.tscn"
+
 [node name="Box" parent="." instance=ExtResource( 2 )]
-position = Vector2( 177, 100 )
+position = Vector2( 171, 100 )
 
 [node name="Box2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 194, 100 )
+position = Vector2( 192, 100 )
 
 [node name="Box3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 211, 100 )
+position = Vector2( 213, 100 )
 
 [node name="PlayerCharacter" parent="." instance=ExtResource( 1 )]
 position = Vector2( 200, 205 )
