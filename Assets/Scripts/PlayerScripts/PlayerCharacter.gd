@@ -2,7 +2,7 @@
 extends KinematicBody2D
 
 enum PERSONALITIES {onda, corpusculo}
-var personality = PERSONALITIES.corpusculo
+var personality = PERSONALITIES.onda
 var changeTimer = 0.3 #0.3
 
 var hurtTimer = 0.3 #0.3

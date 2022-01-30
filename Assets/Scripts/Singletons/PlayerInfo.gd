@@ -3,7 +3,7 @@ extends Node
 var health = 10
 
 enum PERSONALITIES {onda, corpusculo}
-var personality = PERSONALITIES.corpusculo
+var personality = PERSONALITIES.onda
 
 var healthGUI
 var healthGUIRes = preload("res://Objects/Player/HealthGUI.tscn")
