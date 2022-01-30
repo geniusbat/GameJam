@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=2]
@@ -7,12 +7,13 @@
 [ext_resource path="res://tilemap/tilemap.tres" type="TileSet" id=5]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Scripts/EnemyLevelScripts/Enemy level.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Audio/BGM/ganaste.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Objects/HealUp.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Sprite2" type="Sprite" parent="."]
@@ -159,3 +160,6 @@ position = Vector2( 210, 261 )
 
 [node name="HealUp2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 204, 149 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
