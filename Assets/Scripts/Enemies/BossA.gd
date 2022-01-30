@@ -46,10 +46,8 @@ func _physics_process(delta):
 		STATES.attacking:
 			pass
 
-func Hurt(dam,sourcePoint):
-	ToBossB()
-	return
-	if !state==STATES.teleport:
+func Hurt(_dam,_sourcePoint):
+	if state==STATES.attacking or state==STATES.normal:
 		state=STATES.hurt
 		animationPlayer.play("Hurt")
 		hurtTimer=0.4

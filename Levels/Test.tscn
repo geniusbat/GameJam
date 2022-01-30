@@ -56,4 +56,4 @@ position = Vector2( 397, 163 )
 position = Vector2( 387, 127 )
 
 [node name="BossB" parent="." instance=ExtResource( 9 )]
-position = Vector2( 446, 109 )
+position = Vector2( 318, 97 )
