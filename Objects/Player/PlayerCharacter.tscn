@@ -13,6 +13,22 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
 
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 9 )
+region = Rect2( 134, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 9 )
+region = Rect2( 268, 0, 134, 139 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 9 )
+region = Rect2( 402, 0, 134, 139 )
+
 [sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 134, 139 )
@@ -49,20 +65,20 @@ region = Rect2( 402, 0, 134, 139 )
 atlas = ExtResource( 9 )
 region = Rect2( 134, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 8 )
 region = Rect2( 134, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 8 )
 region = Rect2( 268, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 8 )
 region = Rect2( 402, 0, 134, 139 )
 
 [sub_resource type="AtlasTexture" id=13]
@@ -89,14 +105,6 @@ region = Rect2( 670, 0, 134, 139 )
 atlas = ExtResource( 7 )
 region = Rect2( 536, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 120, 100 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 134, 139 )
-
 [sub_resource type="AtlasTexture" id=29]
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 134, 139 )
@@ -105,24 +113,21 @@ region = Rect2( 0, 0, 134, 139 )
 atlas = ExtResource( 6 )
 region = Rect2( 134, 0, 134, 139 )
 
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 8 )
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 120, 100 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 8 )
-region = Rect2( 134, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 8 )
-region = Rect2( 268, 0, 134, 139 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 8 )
-region = Rect2( 402, 0, 134, 139 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "OndaWalk",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
 "loop": true,
 "name": "Corpusculowalk",
@@ -138,20 +143,15 @@ animations = [ {
 "name": "OndaHurt",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
-"name": "OndaWalk",
+"name": "CorpusculoIdle",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 16 ), SubResource( 16 ), SubResource( 16 ), SubResource( 18 ), SubResource( 18 ), SubResource( 18 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ) ],
 "loop": true,
 "name": "CorpusculoAttack",
 "speed": 16.0
-}, {
-"frames": [ SubResource( 31 ), SubResource( 37 ) ],
-"loop": true,
-"name": "OndaDefault",
-"speed": 5.0
 }, {
 "frames": [ SubResource( 29 ) ],
 "loop": true,
@@ -163,9 +163,9 @@ animations = [ {
 "name": "CorpusculoHurt",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"frames": [ SubResource( 31 ), SubResource( 37 ) ],
 "loop": true,
-"name": "CorpusculoIdle",
+"name": "OndaDefault",
 "speed": 5.0
 } ]
 
