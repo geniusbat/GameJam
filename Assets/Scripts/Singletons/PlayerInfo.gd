@@ -15,7 +15,7 @@ func _ready():
 	add_child(backgroundMusic)
 	backgroundMusic.stream=preload("res://Assets/Audio/BGM/misteriosa.mp3")
 	backgroundMusic.volume_db=-10
-	backgroundMusic.play()
+#	backgroundMusic.play()
 	healthGUI=healthGUIRes.instance()
 
 func Go():
