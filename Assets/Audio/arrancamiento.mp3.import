@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/arrancamiento.mp3-daa1e91dfa1391e8e24f5492316daa63.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/arrancamiento.mp3"
+dest_files=[ "res://.import/arrancamiento.mp3-daa1e91dfa1391e8e24f5492316daa63.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

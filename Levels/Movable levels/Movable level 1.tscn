@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player/PlayerCharacter.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://tilemap/tilemap.tres" type="TileSet" id=5]
 [ext_resource path="res://Assets/Scripts/MovableLevelScripts/Movable level.gd" type="Script" id=6]
 [ext_resource path="res://Objects/Statue.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Sign.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33 )
@@ -103,7 +104,7 @@ position = Vector2( 200, 72 )
 goTo = "res://Levels/Enemy levels/Enemy level 1.tscn"
 
 [node name="Statue" parent="." instance=ExtResource( 7 )]
-position = Vector2( 212, 189 )
+position = Vector2( 217, 198 )
 goTo = "res://Levels/Movable levels/Movable level 1.tscn"
 
 [node name="Box" parent="." instance=ExtResource( 3 )]
@@ -111,3 +112,9 @@ position = Vector2( 200, 94 )
 
 [node name="PlayerCharacter" parent="." instance=ExtResource( 2 )]
 position = Vector2( 188, 197 )
+
+[node name="Sign" parent="." instance=ExtResource( 8 )]
+position = Vector2( 211, 161 )
+description = "Onda puede leer textos. Cambia a Corpúsculo pulsando F. Pero ella no querrá leer carteles."
+requiresCharacter = 2
+otherDescription = "¡Qué pérdida de tiempo leer esto! ¡Vamos adelante! ¡Yo puedo mover esa piedra!"
