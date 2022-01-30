@@ -13,6 +13,10 @@ func _ready():
 	var _a=connect("body_entered",self,"BodyEntered")
 	_a=connect("body_exited",self,"BodyExited")
 	sprite.play("default")
+	if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+		modulate.a = 0.1
+	else:
+		modulate.a = 1
 
 func _process(delta):
 	if active:

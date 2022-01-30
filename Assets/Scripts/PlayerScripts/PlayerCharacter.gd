@@ -2,7 +2,7 @@
 extends KinematicBody2D
 
 enum PERSONALITIES {onda, corpusculo}
-var personality = PERSONALITIES.corpusculo
+var personality = PERSONALITIES.onda
 var changeTimer = 0.3 #0.3
 
 var hurtTimer = 0.3 #0.3
@@ -24,6 +24,14 @@ onready var changeParticles = preload("res://Objects/Player/ChangeParticles.tscn
 func _ready():
 	attackArea.disabled=true
 	attackNode.visible=false
+	if PlayerInfo.personality==PlayerInfo.PERSONALITIES.corpusculo:
+		PlayerInfo.personality=PlayerInfo.PERSONALITIES.onda
+		personality=PERSONALITIES.onda
+		ChangePersonality()
+	else:
+		personality=PERSONALITIES.corpusculo
+		PlayerInfo.personality=PlayerInfo.PERSONALITIES.corpusculo
+		ChangePersonality()
 
 func _unhandled_input(event):
 	if event.is_action_pressed("change"):

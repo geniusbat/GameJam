@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/andrew_huang_plonk_snare_one_shot_cut_hit.wav-1071d313046f0f8009c89eccf2d45ccb.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/andrew_huang_plonk_snare_one_shot_cut_hit.wav"
+dest_files=[ "res://.import/andrew_huang_plonk_snare_one_shot_cut_hit.wav-1071d313046f0f8009c89eccf2d45ccb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
