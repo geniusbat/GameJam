@@ -136,7 +136,7 @@ tile_data = PoolIntArray( -655364, 1, 0, -589834, 1, 0, -589833, 1, 0, -589832, 
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 24 )
-goTo = "res://Levels/Enemy levels/Enemy level 10.tscn"
+goTo = "res://Levels/Event levels/Flashback4.tscn"
 
 [node name="Statue" parent="." instance=ExtResource( 9 )]
 position = Vector2( 158, 208 )

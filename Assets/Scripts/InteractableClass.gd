@@ -64,7 +64,7 @@ func RightPersonality():
 func Interact():
 	print_debug("Interacted")
 
-func BodyEntered(body):
+func BodyEntered(_body):
 	bodyIn = true
 	DescriptionGuiLayer.add_child(descriptionGUI)
 

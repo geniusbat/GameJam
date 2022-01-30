@@ -1,7 +1,7 @@
 extends Node2D
 
 class_name ClearRoom
-func _process(delta):
+func _process(_delta):
 	if get_tree().get_nodes_in_group("Enemies").size()==0:
 		RoomCleared()
 

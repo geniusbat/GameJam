@@ -20,9 +20,9 @@ func _ready():
 
 func Go():
 	if lastLevel!="":
-		get_tree().change_scene_to(load(lastLevel))
+		var _a=get_tree().change_scene_to(load(lastLevel))
 	else:
-		get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
+		var _a=get_tree().change_scene_to(preload("res://Levels/Movable levels/Movable level 1.tscn"))
 
 func _process(_delta):
 	CheckHealth()
@@ -30,9 +30,6 @@ func _process(_delta):
 		if !healthGUI.is_inside_tree():
 			add_child(healthGUI)
 		else:
-			if health==0:
-				Die()
-				return
 			var container = healthGUI.get_node("GUI/HealthContainer")
 			if container.get_child_count()!=health:
 				var diff = health-container.get_child_count()
@@ -44,6 +41,8 @@ func _process(_delta):
 					ins.texture = preload("res://Assets/Sprites/Heart.png")
 					container.add_child(ins)
 					diff-=1
+			if health==0:
+				Die()
 	else:
 		if healthGUI.is_inside_tree():
 			remove_child(healthGUI)
