@@ -63,6 +63,7 @@ func Hurt(dam,_sourcePoint):
 			Die()
 
 func Die():
+	yield(get_tree().create_timer(0.4), "timeout")
 	get_tree().change_scene_to(load("res://Levels/Event levels/PostBoss.tscn"))
 
 func DonedStun():
