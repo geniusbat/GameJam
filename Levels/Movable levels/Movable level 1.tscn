@@ -116,5 +116,4 @@ position = Vector2( 188, 197 )
 [node name="Sign" parent="." instance=ExtResource( 8 )]
 position = Vector2( 211, 161 )
 description = "Onda puede leer textos. Cambia a Corpúsculo pulsando F. Pero ella no querrá leer carteles."
-requiresCharacter = 2
 otherDescription = "¡Qué pérdida de tiempo leer esto! ¡Vamos adelante! ¡Yo puedo mover esa piedra!"
