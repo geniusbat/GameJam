@@ -599,12 +599,14 @@ anims/Teleport = SubResource( 26 )
 anims/Transform = SubResource( 28 )
 
 [node name="Humo" type="Particles2D" parent="."]
+visible = false
 position = Vector2( 0, 9 )
 amount = 80
 explosiveness = 0.5
 process_material = SubResource( 30 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
+visible = false
 position = Vector2( 0, 10 )
 amount = 200
 lifetime = 0.6

@@ -13,6 +13,8 @@ var hurtTimer = 0.4 #TODO
 onready var player = get_tree().get_root().find_node("PlayerCharacter",true,false)
 
 func _ready():
+	$Particles2D.visible=true
+	$Humo.visible=true
 	$Particles2D.emitting=false
 	$Humo.emitting=false
 	position=get_parent().get_node("Stage00").position
