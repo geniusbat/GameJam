@@ -12,6 +12,7 @@ func _process(delta):
 	if inside:
 		changeTimer-=delta
 		if changeTimer<=0:
+			PlayerInfo.lastLevel = goTo
 			var _a=get_tree().change_scene_to(load(goTo))
 
 func _on_MoveToSceneTrigger_body_entered(_body):
